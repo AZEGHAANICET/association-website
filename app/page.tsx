@@ -8,7 +8,7 @@ export default function Home() {
                 flex
                 flex-col
                 bg-white
-                bg-[linear-gradient(rgb(255_0_0_/_0.15)_1px,transparent_1px),linear-gradient(90deg,rgb(0_255_0_/_0.15)_1px,transparent_1px)]
+                bg-[linear-gradient(rgb(255_0_0_/_0.1)_1px,transparent_1px),linear-gradient(90deg,rgb(0_255_0_/_0.1)_1px,transparent_1px)]
                 bg-[size:40px_40px]
 
             "
