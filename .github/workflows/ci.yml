@@ -1,0 +1,67 @@
+name: CI - Next.js Quality Gate
+
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+
+env:
+  NODE_VERSION: "22"
+
+
+jobs:
+
+  quality-check:
+
+    name: Code Quality
+    runs-on: ubuntu-latest
+
+
+    steps:
+
+      # Checkout code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      # Node setup
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+
+      # Install exactly package-lock.json versions
+      - name: Install dependencies
+        run: npm ci
+
+
+      # Type safety
+      - name: TypeScript check
+        run: npm run type-check
+
+
+      # Lint
+      - name: ESLint
+        run: npm run lint
+
+
+      # Unit tests
+      - name: Tests
+        run: npm run test
+
+
+      # Security scan
+      - name: Dependency audit
+        run: npm audit --audit-level=high
+
+
+      # Production build verification
+      - name: Build verification
+        run: npm run build
