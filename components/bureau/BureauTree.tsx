@@ -60,11 +60,7 @@ const nodeTypes = {
 
 
 type BureauTreeProps = {
-    /**
-     * Classes additionnelles appliquées au conteneur racine.
-     * Permet de personnaliser bordures, ombre, radius, etc.
-     * depuis l'endroit où le composant est utilisé.
-     */
+
     className?: string;
 };
 
@@ -219,7 +215,7 @@ export default function BureauTree({ className = "" }: BureauTreeProps) {
                 rounded-2xl
                 overflow-hidden
                 shadow-2xl
-                border
+                
                 bg-gray-50
                 dark:bg-gray-900
                 ${className}
