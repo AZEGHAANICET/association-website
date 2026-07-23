@@ -16,7 +16,7 @@ export default function Home() {
             <div className=" mt-22">
                 <div className="w-[400px] mx-auto flex-col items-center justify-center">
 
-                    <h1 className="text-2xl font-bold md:text-3xl w-full mx-auto text-center -tracking-wider">Association des <span className="text-orange-400 text-3xl md:text-4xl">Anciens étudiants de Belabo </span>Promo 2013</h1>
+                    <h1 className="text-2xl font-bold md:text-3xl w-full mx-auto text-center -tracking-wider text-black ">Association des <span className="text-orange-400 text-3xl md:text-4xl">Anciens étudiants de Belabo </span>Promo 2013</h1>
                     <p className="text-center mt-4 px-2  font-thin tracking-wider bg-blue-600 text-3xl text-white py-2 shadow-[10px_10px_0px_rgba(255,0,0,0.2)]">Faites de vos études une oeuvre d'art</p>
                 </div>
             </div>
