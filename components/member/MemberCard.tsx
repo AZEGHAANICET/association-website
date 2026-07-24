@@ -23,10 +23,11 @@ group
 bg-white
 rounded-3xl
 overflow-hidden
-shadow-sm
+
 hover:shadow-xl
 transition-all
 duration-500
+shadow-[10px_10px_0px_rgba(255,0,0,0.2)]
 "
         >
 
